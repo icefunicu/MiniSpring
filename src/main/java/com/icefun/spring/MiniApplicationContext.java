@@ -76,8 +76,8 @@ public class MiniApplicationContext {
 
             // 获取ComponentScan的扫描绝对路径
             ComponentScan componentScanAnnotation = (ComponentScan) configClass.getAnnotation(ComponentScan.class);
-            String path = componentScanAnnotation.value().replace(".", "/"); // com/ylan/test
-            File file = new File(Thread.currentThread().getContextClassLoader().getResource(path).getFile());  // G:\Coding\java\Spring-Ylan\target\classes\com\ylan\test
+            String path = componentScanAnnotation.value().replace(".", "/"); // com/icefun/test
+            File file = new File(Thread.currentThread().getContextClassLoader().getResource(path).getFile());  // E:\Demo_pakge\IFMini-Spring-master\IFMini-Spring-master\target\classes\com\icefun\test
             System.out.println("[[[[[[   MSG   ComponentScan 扫描路径 >>>>>> " + file);
 
             // 路径中存在空格等字符，经过 classLoader.getResource 方法后变成了Unicode编码
